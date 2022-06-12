@@ -34,6 +34,9 @@ footer, header, hgroup, menu, nav, section {
 
 * {
    box-sizing: border-box;
+   text-decoration: none;
+   color: #8c8c8c;
+   
 }
 
 
@@ -41,8 +44,9 @@ html, body {
   font-family: "Roboto", sans-serif;
   background-color: #fff;
   line-height: 1.9;
-  color: #8c8c8c;
+
   position: relative;
+  
 
  }
 

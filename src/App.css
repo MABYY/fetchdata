@@ -5,34 +5,28 @@
 }
 
 .home_div {
-  /* border: 2px solid black; */
   margin: 1%;
   padding: 2%;
   width: 100%;
   text-align: center;
 }
 
-.nav_bar {
-  /* border: 2px solid black; */
-  margin: 1%;
-  padding: 2%;
-  width: 100%;
-  text-align: center;
-  background-color: 	#2c57d8;
-}
+ul {
 
-.nav_bar a {
-  /* border: 2px solid green; */
-  margin: 2%;
-  font-size:1.2rem;
-  color: #F5F5F5;
+ font-size: 110%;
+  background-color: 	#30333e;
+  width: 100%;
+	display:flex;
+	justify-content: space-around;
   text-decoration: none;
-  opacity: 0.8;
-  
+  justify-content: space-around
 }
 
-a:hover {
-  opacity: 1
+li {
+  padding: 2%;
+  list-style-type: none;
+  
+
 }
 
 /* Home */
@@ -41,21 +35,17 @@ a:hover {
   font-size:2rem;
   margin: 1%;
   padding: 2%;
-  /* border: 2px solid pink; */
 }
 
 .home_div_child {
   font-size:1.2rem;
-  /* border: 2px solid pink; */
   margin: 1%;
   padding: 2%; 
-  /* justify-content: space-around; */
   display: flex;
   justify-content: space-between;
 }
 
 .div_home_left {
-  /* border: 2px solid pink; */
   display: inline-block;
   vertical-align: top;
   margin: 1%;
@@ -64,7 +54,6 @@ a:hover {
 }
 
 .button_home {
-  /* border: 2px solid pink; */
   font-size:1.5rem;
   border-radius: 12%;
   padding: 5% 10%; 
@@ -87,7 +76,6 @@ a:hover {
 
 
 .button_logout {
-  /* border: 2px solid pink; */
   font-size:1rem;
   border-radius: 12%;
   padding: 1% 5%; 
@@ -99,7 +87,6 @@ a:hover {
 /* LOG IN */
 
 .div_login{
-
   display: block;
   padding: 5%;
   padding-left: 20%;
@@ -111,7 +98,6 @@ a:hover {
   font-size: 110%;
 }
 .button_login {
-  /* border: 2px solid pink; */
   font-size:1rem;
   border-radius: 12%;
   padding: 1% 2%; 
@@ -146,7 +132,6 @@ h1{
 /* Select Data */
 
 .button_sd {
-  /* border: 2px solid pink; */
   font-size:1rem;
   border-radius: 12%;
   padding: 1% 2%; 

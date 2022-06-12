@@ -22,21 +22,23 @@ function App() {
     
     <div >
        <BrowserRouter>
-        <nav className="nav_bar">
+        <ul className="nav_bar">
 
-          <div className='navbar_div'><Link to="/">Home</Link></div>
-          <div  className='navbar_div'><Link to="/signup">Sign up</Link></div>
-          <div  className='navbar_div'><Link to="/login">Log in</Link></div>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/signup">Sign up</Link></li>
+          <li><Link to="/login">Log in</Link></li>
           
             {
               (localStorage.getItem('token')) &&
-              <div  className='navbar_div'><Link to="/selectData">Select Fund</Link></div>
+              <li><Link to="/selectData">Select Fund</Link></li>
               }
        
           {/* <div><Link to="/portfolioDisplay">Portfolio Display</Link></div> */}
-          <div  className='navbar_div'><Link  to="/logout"  onClick ={hadleLogout} >Logout</Link></div>
+          <li><Link  to="/logout"  
+                    onClick ={hadleLogout} 
+                    >Logout</Link></li>
      
-        </nav>
+        </ul>
         
         <Routes>
 
