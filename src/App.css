@@ -1,0 +1,203 @@
+.App {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.home_div {
+  /* border: 2px solid black; */
+  margin: 1%;
+  padding: 2%;
+  width: 100%;
+  text-align: center;
+}
+
+.nav_bar {
+  /* border: 2px solid black; */
+  margin: 1%;
+  padding: 2%;
+  width: 100%;
+  text-align: center;
+  background-color: 	#2c57d8;
+}
+
+.nav_bar a {
+  /* border: 2px solid green; */
+  margin: 2%;
+  font-size:1.2rem;
+  color: #F5F5F5;
+  text-decoration: none;
+  opacity: 0.8;
+  
+}
+
+a:hover {
+  opacity: 1
+}
+
+/* Home */
+
+.div_h1 {
+  font-size:2rem;
+  margin: 1%;
+  padding: 2%;
+  /* border: 2px solid pink; */
+}
+
+.home_div_child {
+  font-size:1.2rem;
+  /* border: 2px solid pink; */
+  margin: 1%;
+  padding: 2%; 
+  /* justify-content: space-around; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.div_home_left {
+  /* border: 2px solid pink; */
+  display: inline-block;
+  vertical-align: top;
+  margin: 1%;
+  width: 50%;
+  
+}
+
+.button_home {
+  /* border: 2px solid pink; */
+  font-size:1.5rem;
+  border-radius: 12%;
+  padding: 5% 10%; 
+  opacity: 0.6;
+  margin: 0% 0% 10% 0% ;
+  border-color: #e7e7e7;
+}
+
+.button_home:hover {
+	opacity: 1
+}
+
+/* LOGOUT */
+
+.div_logout{
+    display: block;
+    font-size: 150%;
+    padding: 20%;
+}
+
+
+.button_logout {
+  /* border: 2px solid pink; */
+  font-size:1rem;
+  border-radius: 12%;
+  padding: 1% 5%; 
+  opacity: 0.6;
+  margin: 10% 0% 10% 0% ;
+  border-color: #e7e7e7;
+}
+
+/* LOG IN */
+
+.div_login{
+
+  display: block;
+  padding: 5%;
+  padding-left: 20%;
+
+
+}
+.div_form{
+  border-color: green;
+  font-size: 110%;
+}
+.button_login {
+  /* border: 2px solid pink; */
+  font-size:1rem;
+  border-radius: 12%;
+  padding: 1% 2%; 
+  opacity: 0.6;
+  margin: 1% 0% 1% 0% ;
+  border-color: #e7e7e7;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style:  hidden;
+  background-color: #eee;
+}
+input::placeholder {
+  color: grey;
+  font-size: 90%;
+  font-style: italic;
+ 
+  
+}
+
+h1{
+  color: grey;
+  font-size: 150%;
+  margin: 2% 0% 5% 0%
+  
+}
+
+
+/* Select Data */
+
+.button_sd {
+  /* border: 2px solid pink; */
+  font-size:1rem;
+  border-radius: 12%;
+  padding: 1% 2%; 
+  opacity: 0.6;
+  margin: 1% 0% 1% 0% ;
+  border-color: #e7e7e7;
+}
+
+.drop_class {
+
+    margin: 1% 40% 1% 0% ;
+}
+
+
+
+/* PORTFOLIO DISPLAY */
+
+h2{
+  font-weight: bold;
+  font-size: 150%;
+  margin: 5% 0% 0% 0% ;
+}
+
+h3  {
+  font-size: 110%;
+  font-weight: bold;
+}
+li{
+  font-weight: bold;
+}
+
+/* DYNAMIC TABLE */
+
+.table{
+  
+  width: 70%;
+}
+
+th {
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 1% ;
+  text-align: left;
+  font-size: 90%;
+  border-bottom: 5% solid #ddd;
+  vertical-align: center;
+  height: 1%;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
