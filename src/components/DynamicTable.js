@@ -1,6 +1,4 @@
 import PieChart from './pieChart'
-import react, {useEffect,useState} from 'react'
-import AssetDynamicTable from './AssetsDyData'
 import '../App.css'
 
 function DynamicTable(props){

@@ -1,7 +1,6 @@
 import  {useState,useEffect} from "react";
 import {BASE_URL} from '../constants/constants'
 import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
 import { useNavigate as useHistory } from "react-router-dom";
 import {AxiosWithAuth} from '../utils/axiosWithAuth'
 import PortfolioDisplay from './portfolioDisplay'
