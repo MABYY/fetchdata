@@ -51,10 +51,7 @@ function Login(props) {
 
     const submitFc = (e) => {
       e.preventDefault();
-      //console.log('New user !', user)
       const NewUser = { ...user }
-      // console.log('New user !', NewUser)
-      // setUser({ email: "", password: "" });
       axios
         .post(`${BASE_URL}/auth/login`, NewUser)
         .then((response) => {

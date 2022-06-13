@@ -1,6 +1,6 @@
 import { useNavigate as useHistory } from "react-router-dom";
 import React , {useState, useEffect} from "react";
-import * as yup from "yup";
+import * as  yup from "yup";
 import axios from "axios";
 import {BASE_URL} from '../constants/constants'
 import '../App.css'
@@ -49,10 +49,7 @@ function Signup() {
 
     const submitFc = (e) => {
       e.preventDefault();
-      //console.log('New user !', user)
       const NewUser = { ...user }
-      // console.log('New user !', NewUser)
-      // setUser({ email: "", password: "" });
       axios
         .post(`${BASE_URL}/auth/register`, NewUser)
         .then((response) => {
