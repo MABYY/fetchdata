@@ -18,7 +18,7 @@ function Signup() {
   // Define yup schema
   const userSchema = yup.object().shape({
     username: yup.string().min(6).required('Provide a valid username'),
-    email: yup.string().email().required('Provide a valid email'),
+    email: yup.string().email("This is not an email").required('Provide a valid email'),
     password: yup.string().min(6).required('Provide a valid password, min 6 charaters'),
   })
 

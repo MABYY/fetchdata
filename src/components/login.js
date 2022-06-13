@@ -20,7 +20,7 @@ function Login(props) {
   
   // Define yup schema
   const userSchema = yup.object().shape({
-    email: yup.string().email().required('Provide a valid email'),
+    email: yup.string().email("This is not an email").required('Provide a valid email'),
     password: yup.string().min(6).required('Provide a valid password, min 6 charaters'),
   })
 
@@ -34,14 +34,14 @@ function Login(props) {
       setErrors({ ...errors, [name]: "" });
     })
     .catch((err)=>{
-      //console.log("errooorrsss", err.errors);
+      console.log("LOGIN errooorrsss", err.errors);
       setErrors({...errors, [name]: err.errors[0]})
     })
   }
 
   const changeFc = (e)=>{
-    setUser({...user,[e.target.name] :e.target.value.toString()});  // save data of new user
-    setFormErrors( e.target.name, e.target.value.toString()) // perform yup validation function
+    setUser({...user,[e.target.name] :e.target.value.toString()});  
+    setFormErrors( e.target.name, e.target.value.toString()) 
   }
 
     // Once the data is valid allow the user to submit the form
