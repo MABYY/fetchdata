@@ -1,18 +1,12 @@
 import  {useState,useEffect} from "react";
 import {BASE_URL} from '../constants/constants'
 import Dropdown from 'react-dropdown';
-import { useNavigate as useHistory } from "react-router-dom";
 import {AxiosWithAuth} from '../utils/axiosWithAuth'
 import PortfolioDisplay from './portfolioDisplay'
-import '../App.css'
+
 
 function FundLookUp(props) {
-        //console.log('PROPSFLUP', Object.keys(props))
-        const history = useHistory();
-        //const valueDate = props.pickDate
-        
         const valDate =   props.pickDate // "08-03-2022"
-        //console.log('valDate', valDate,  props.pickDate  )
 
         // Selected fund
     const [pickFund, setpickFund] = useState('')
@@ -21,7 +15,6 @@ function FundLookUp(props) {
 
     /// FIND FUNDS
 
-    //const fundsArray=[]
     useEffect(() => {   
             const findFund = {'Fecha': valDate}
             //axios
@@ -31,12 +24,9 @@ function FundLookUp(props) {
             AxiosWithAuth()
             .post(`${BASE_URL}/fundsData/selectbydate`, findFund)
             .then((response) => {
-                //console.log('responseDate', response.data)
                 const fundsData =  response.data
                 let fundNames = fundsData.map( item =>{return item['Nombre_Fondo']})
-               // console.log('fundNames', fundNames)
                 setfundsArray(fundNames)
-                //console.log('ITWORKS', fundsArray)
             })
             .catch((err) => {
             console.log(err);
@@ -51,9 +41,7 @@ function FundLookUp(props) {
              AxiosWithAuth()
              .post(`${BASE_URL}/fundsData/select`, findFund)
              .then((response) => {
-                 //console.log('findFundAPI', response.data.Api)
                  setfundApi(response.data.Api)
-                 //console.log('fundApi', fundApi)
              })
              .catch((err) => {
              console.log(err);
@@ -63,22 +51,19 @@ function FundLookUp(props) {
 
    const changeFc = (e) =>{
     setpickFund(e['value'])
-    //console.log('pickFund', pickFund)
    }
 
 
     return (
         <div >
-            <form className='div_form'>         
-                <label htmlFor='dropdownlist' > Select a fund </label>
-                <div className= 'drop_class'>
+            <form className="div_form">         
+                <label htmlFor='dropdownlist' > Select a fund 
                     <Dropdown  id="dropdownlist"
                                 options={fundsArray} 
                                 value={pickFund} 
                                 onChange={changeFc}
-                                />  
-        </div>
-     
+                                /> 
+                </label>
             </form> 
       <br></br>
 
@@ -108,5 +93,3 @@ function FundLookUp(props) {
 }
 
 export default FundLookUp;
-
-//<div><Link to="/portfolioDisplay">Portfolio Display</Link></div>

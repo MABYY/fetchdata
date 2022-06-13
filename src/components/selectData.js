@@ -7,8 +7,7 @@ function SelectData(props) {
     const [pickDate, setpickDate] = useState()
 
     //const valDate = "08-03-2022" ///////////// CHANGE TO MAKE DAYS DYNAMIC
-
-//const [disabled, setDisabled] = useState(true)
+    //const [disabled, setDisabled] = useState(true)
 
 const changeFc = (e) =>{
         const yr = e.target.value.split('-')[0]
@@ -24,7 +23,8 @@ const changeFc = (e) =>{
 
         <div  className= 'div_login'>
             <form className='div_form'>
-                <label htmlFor='date' > Pick date to retrive  </label>
+                <label htmlFor='date' > Pick date to retrive (March 8th 2022)</label>
+                <br></br>
                 <input id="date" 
                   name= 'date'   
                   type = 'date' 

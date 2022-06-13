@@ -59,30 +59,22 @@ function DynamicTable(props){
       })
   }
   return (
+      <>
+          <table className="table">
+            <thead>
+              <tr>{ThData()}</tr>
+            </thead>
+            <tbody>
+              {tdData()}
+            </tbody>
+        </table>
+        
+        <br></br>
+        <br></br>
 
-    <>
-      {/* <div>Dynamic Portfolio</div> */}
-
-        <table className="table">
-          <thead>
-            <tr>{ThData()}</tr>
-          </thead>
-          <tbody>
-            {tdData()}
-          </tbody>
-       </table>
-       
-       <br></br>
-       <br></br>
-
-      <PieChart labels={chartLabels} series={chartSeries}/> 
-      
-    </>
+        <PieChart labels={chartLabels} series={chartSeries}/>       
+      </>
 
   )
 }
 export default DynamicTable;
-
-// style table: https://mdbootstrap.com/docs/react/tables/basic/
-// https://react-bootstrap.github.io/components/table/
-// https://stackoverflow.com/questions/32461271/nodejs-timeout-a-promise-if-failed-to-complete-in-time

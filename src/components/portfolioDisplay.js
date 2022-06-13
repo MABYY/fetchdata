@@ -47,9 +47,6 @@ function PortfolioDisplay(props){
     return (
         <div>
           
-          {/* <button className="md-button shop-button" onClick={() => {history("/selectData");
-                                }}>Select a different fund</button> */}
-
           <h2>Portfolio Data</h2>
                 <ul>
                     <li>Fund Name : {fundDisplay.fundName}</li>
