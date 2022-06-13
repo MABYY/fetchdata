@@ -1,6 +1,6 @@
 import { useNavigate as useHistory } from "react-router-dom";
 import React , {useState, useEffect} from "react";
-import * as yup from "yup";
+import * as Yup from "yup";
 import axios from "axios";
 import {BASE_URL} from '../constants/constants'
 
@@ -19,14 +19,14 @@ function Login(props) {
   const [welcomeMessage, setwelcomeMessage] = useState([]);
   
   // Define yup schema
-  const userSchema = yup.object().shape({
-    email: yup.string().email("This is not an email").required('Provide a valid email'),
-    password: yup.string().min(6).required('Provide a valid password, min 6 charaters'),
+  const userSchema = Yup.object().shape({
+    email: Yup.string().email("This is not an email").required('Provide a valid email'),
+    password: Yup.string().min(6).required('Provide a valid password, min 6 charaters'),
   })
 
  // Function that takes the userSchema and validates the data provided by the user
   const setFormErrors = (name, value) => {
-    yup
+    Yup
     .reach(userSchema, name)
     .validate(value)
     .then((valid) => {
